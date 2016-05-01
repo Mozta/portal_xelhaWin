@@ -1,0 +1,104 @@
+{% load staticfiles %}
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Portal1</title>
+		<link rel='stylesheet' href='{% static "css/main.css" %}'/>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1><a href="index.html">Experiencias Xcaret</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="#" class="button">Salir</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<section id="main" class="container">
+					<div class="row">
+						<div class="12u">
+							<!-- Form -->
+								<section class="box">
+									<h3>Busqueda</h3>
+									<form method="post" action="#">
+										<div class="row uniform 50%">
+											<div class="4u 12u(narrower)">										
+												<input type="radio" id="1" name="tipoBusq" checked>
+												<label for="1">Activo</label>
+											</div>
+											<div class="4u 12u(narrower)">
+												<input type="radio" id="2" name="tipoBusq">
+												<label for="2">Serie</label>
+											</div>
+										</div>
+									</form>
+
+									<form method="post" action="#">
+										<div class="row uniform 50%">
+											<div class="9u 12u(mobilep)">
+												<input type="text" name="query" id="MyTipo" value="" placeholder="#Activo" />
+											</div>
+											<div class="3u 12u(mobilep)">
+												<input type="submit" value="Buscar" class="fit" />
+											</div>
+										</div>
+									</form>
+
+									<script>
+										const BOT_TOKEN = "189287883:AAGp4FyMAKKamjuoSUaegb_KVZPQZB9sizE";
+										const CHAT_ID = "";
+										const API_URL = "https://api.telegram.org/bot"+BOT_TOKEN+"/";
+
+										enviar_telegram("Que onda");
+										
+										function enviar_telegram(msj){
+											queryArray = [
+												'chat_id':CHAT_ID, 'text':msj,
+											];
+											url = 'https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage'+http_build_query(queryArray);
+											result = file_get_contents(url);
+										}
+									</script>
+								</section>
+						</div>
+					</div>
+					
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="http://192.168.40.223/ocsreports/" class="icon fa-cogs"><span class="label">OCS</span></a></li>
+						<li><a href="http://192.168.40.223/glpi/" class="icon fa-rocket"><span class="label">GLPI</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Portal de mantenimientos v0.1 </li><li><a href="http://es.xelha.com/">Xel-Ha</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+			<script src="assets/js/changePlaceholder.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,32 @@
+[
+    {
+        nombre: "Equipos",
+        dato: "23",
+        color:"#46A9E0"
+    },
+    {
+        nombre: "Monitores",
+        dato: "11",
+        color:"#00881E"
+    },
+    {
+        nombre: "Periféricos",
+        dato: "1",
+        color:"#DA1A80"
+    },
+    {
+        nombre: "Impresoras",
+        dato: "8",
+        color:"#FF7700"
+    },
+    {
+        nombre: "Electrónica de red",
+        dato: "8",
+        color:"#85A113"
+    },
+    {
+        nombre: "Teléfonos",
+        dato: "8",
+        color:"#FF1F3D"
+    }
+]

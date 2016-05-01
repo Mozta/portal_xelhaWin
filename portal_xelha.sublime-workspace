@@ -1,0 +1,486 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"qu",
+				"queryArray"
+			],
+			[
+				"htt",
+				"https"
+			],
+			[
+				"Regis",
+				"Registrado"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/inicio/models.py",
+			"settings":
+			{
+				"buffer_size": 405,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/portal/settings.py",
+			"settings":
+			{
+				"buffer_size": 3325,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/inicio/admin.py",
+			"settings":
+			{
+				"buffer_size": 288,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/inicio/views.py",
+			"settings":
+			{
+				"buffer_size": 269,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/inicio/urls.py",
+			"settings":
+			{
+				"buffer_size": 156,
+				"line_ending": "Windows",
+				"name": "urls.py"
+			}
+		},
+		{
+			"file": "src/portal/urls.py",
+			"settings":
+			{
+				"buffer_size": 1088,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/templates/login.html",
+			"settings":
+			{
+				"buffer_size": 2523,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/inicio/migrations/0001_initial.py",
+			"settings":
+			{
+				"buffer_size": 885,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/templates/manttosPrev.html",
+			"settings":
+			{
+				"buffer_size": 3336,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Mozta/Desktop/portal_xelha/src/inicio/telegrambot.urls",
+		"/C/Users/Mozta/Desktop/portal_xelha/src/inicio/migrations/0001_initial.py",
+		"/C/Users/Mozta/Documents/GitHub/portalXelha/src/manage.py",
+		"/C/Users/Mozta/Desktop/portal_xelha/portal/manage.py",
+		"/C/Users/Mozta/Desktop/portal_xelha/Scripts/django-admin.py",
+		"/C/Users/Mozta/Downloads/process_form.php",
+		"/C/Users/Mozta/Downloads/soonweb/index.html",
+		"/C/Users/Mozta/Desktop/Interfaz/interfaz_deteccion_Facial.py",
+		"/C/Users/Mozta/Documents/Diagnostijuego/Assets/Introduccion/Video.mat",
+		"/C/Users/Mozta/Desktop/Interfaz/interfaz_deteccion_Facial - copia.py",
+		"/C/Users/Mozta/Documents/Servicio Social/Interfaz/interfaz_deteccion_Facial.py",
+		"/C/Users/Mozta/Desktop/Interfaz/genera_string_bd.py",
+		"/C/Users/Mozta/Desktop/Interfaz/esteganografia.py",
+		"/C/Users/Mozta/Desktop/Interfaz/create_csv.py",
+		"/C/Users/Mozta/Desktop/Interfaz/binariza_me.py",
+		"/C/Users/Mozta/Documents/Servicio Social/Interfaz/binariza_final.py",
+		"/C/Users/Mozta/Documents/Servicio Social/Interfaz/binariza_me.py",
+		"/C/Users/Mozta/Documents/Diagnostijuego/2015-09-20_191008/crash.dmp",
+		"/C/Users/Mozta/Desktop/Diagnostijuego V8/2015-12-28_214820/crash.dmp",
+		"/C/Users/Mozta/Desktop/Diagnostijuego V8/2015-12-28_203900/output_log.txt",
+		"/C/Users/Mozta/Desktop/Diagnostijuego V8/2015-12-28_203900/report.ini",
+		"/C/Users/Mozta/Desktop/Diagnostijuego V8/2015-12-28_203900/crash.dmp"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"favicon.jpg",
+			"PlayerPrefs.SetString (\"dis1",
+			"."
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 8,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/inicio/models.py",
+					"settings":
+					{
+						"buffer_size": 405,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								405,
+								405
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/portal/settings.py",
+					"settings":
+					{
+						"buffer_size": 3325,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1646,
+								1646
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 495.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/inicio/admin.py",
+					"settings":
+					{
+						"buffer_size": 288,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								288,
+								288
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/inicio/views.py",
+					"settings":
+					{
+						"buffer_size": 269,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								247,
+								258
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/inicio/urls.py",
+					"settings":
+					{
+						"buffer_size": 156,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								154,
+								154
+							]
+						],
+						"settings":
+						{
+							"auto_name": "urls.py",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/portal/urls.py",
+					"settings":
+					{
+						"buffer_size": 1088,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1088,
+								1088
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/templates/login.html",
+					"settings":
+					{
+						"buffer_size": 2523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1698,
+								1698
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/inicio/migrations/0001_initial.py",
+					"settings":
+					{
+						"buffer_size": 885,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								363,
+								461
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/templates/manttosPrev.html",
+					"settings":
+					{
+						"buffer_size": 3336,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								916,
+								916
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 345.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

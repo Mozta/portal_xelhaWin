@@ -1,0 +1,78 @@
+{% load staticfiles %}
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Portal1</title>
+		<link rel='stylesheet' href='{% static "css/main.css" %}'/>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1><a href="index.html">Experiencias Xcaret</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="#" class="button">Salir</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<section id="main" class="container">
+					<div class="hijo_uno">
+						<div class="12u">
+							<!-- Form -->
+								<section class="box">
+									<h3>Identificación</h3>
+									<form method="post" action="manttosPrev.html">
+										<div class="row uniform 50%">
+											<div class="12u 12u(mobilep)">
+												<input type="text" name="name" id="name" value="" placeholder="Usuario" />
+											</div>
+											<div class="12u 12u(mobilep)">
+												<input type="password" name="password" id="password" value="" placeholder="Contraseña" />
+											</div>
+											<div class="12u 12u(mobilep)">
+												<input type="submit" value="Buscar" class="fit" />
+											</div>
+										</div>
+									</form>
+								</section>
+						</div>
+					</div>
+					
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="http://192.168.40.223/ocsreports/" class="icon fa-cogs"><span class="label">OCS</span></a></li>
+						<li><a href="http://192.168.40.223/glpi/" class="icon fa-rocket"><span class="label">GLPI</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Portal de mantenimientos v0.1 </li><li><a href="http://es.xelha.com/">Xel-Ha</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+			<script src="assets/js/changePlaceholder.js"></script>
+
+	</body>
+</html>
