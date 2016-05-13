@@ -295,29 +295,21 @@ function f() {
   	center.append("title")	//Texto mostrado al situar el puntero
       	.text("zoom out");
 
-function tabla(d,col){
-    	var voy = 0;
+//Function que añade y actualiza los datos de la tabla de referencias
+function tabla(d,col){    	
+    	tamTabla.push(d.name);	//array que nos sirve de apoyo para añadir más filas a la tabla (su valor no es relevante, sus posiciones si)
+    	
+    	tr = tbody.selectAll("tr")	//aqui creamos las filas que llevara el tbody
+			.data(tamTabla)
+			.enter().append("tr");
 
-    	tamTabla.push("voy");
-
-    	tr = tbody.selectAll("tr")
-						.data(tamTabla)
-						.enter().append("tr");
-
-		          	tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
-	            		.attr("width", '16').attr("height", '16')
-						.attr("fill",col);
-
-				    tr.append("td").text(d.name);
-				    tr.append("td").text(d.value);
-
-				    
-
-				    //alert("aguanta");
-
-		          	voy++;
-		          	//alert(tamTabla.length);
-    }
+		//Las siguientes lineas añaden las columnas (td) a cada fila (tr)
+		tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
+			.attr("width", '16').attr("height", '16')
+			.attr("fill",col);
+		tr.append("td").text(d.name).attr('class','legendName');
+		tr.append("td").text(d.value).attr('class','legendValue');
+}
 
 	var path = svg.selectAll("g")	//Dibujado de las primeras rebanadas (intro)
       	.data(partition.nodes(root).slice(1))
