@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"le",
+				"legend"
+			],
+			[
+				"tam",
+				"tamTabla"
+			],
+			[
+				"sele",
+				"selectAll"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"aq",
+				"aquiGrafica3"
+			],
+			[
+				"si",
+				"size"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
 				"qu",
 				"queryArray"
 			],
@@ -20,75 +52,66 @@
 	"buffers":
 	[
 		{
-			"file": "src/inicio/models.py",
+			"file": "src/templates/manttosPrev.html",
 			"settings":
 			{
-				"buffer_size": 405,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/portal/settings.py",
-			"settings":
-			{
-				"buffer_size": 3325,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/inicio/admin.py",
-			"settings":
-			{
-				"buffer_size": 288,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/inicio/views.py",
-			"settings":
-			{
-				"buffer_size": 269,
-				"line_ending": "Unix"
+				"buffer_size": 3336,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "src/inicio/urls.py",
 			"settings":
 			{
-				"buffer_size": 156,
-				"line_ending": "Windows",
-				"name": "urls.py"
-			}
-		},
-		{
-			"file": "src/portal/urls.py",
-			"settings":
-			{
-				"buffer_size": 1088,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/templates/login.html",
-			"settings":
-			{
-				"buffer_size": 2523,
+				"buffer_size": 244,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/inicio/migrations/0001_initial.py",
+			"file": "src/inicio/views.py",
 			"settings":
 			{
-				"buffer_size": 885,
+				"buffer_size": 411,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/templates/manttosPrev.html",
+			"file": "src/templates/pastel4.html",
 			"settings":
 			{
-				"buffer_size": 3336,
+				"buffer_size": 23415,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/templates/__pastel4.html",
+			"settings":
+			{
+				"buffer_size": 8997,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/assets/css/style_inicio.css",
+			"settings":
+			{
+				"buffer_size": 2868,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/templates/pastel3.html",
+			"settings":
+			{
+				"buffer_size": 18891,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/assets/js/Donut3D.js",
+			"settings":
+			{
+				"buffer_size": 6334,
 				"line_ending": "Windows"
 			}
 		}
@@ -117,8 +140,15 @@
 	},
 	"file_history":
 	[
-		"/C/Users/Mozta/Desktop/portal_xelha/src/inicio/telegrambot.urls",
+		"/C/Users/Mozta/Desktop/portal_xelha/src/portal/urls.py",
+		"/C/Users/Mozta/Desktop/portal_xelha/src/inicio/urls.py",
+		"/C/Users/Mozta/Desktop/portal_xelha/src/inicio/views.py",
+		"/C/Users/Mozta/Desktop/portal_xelha/src/inicio/admin.py",
+		"/C/Users/Mozta/Desktop/portal_xelha/src/portal/settings.py",
+		"/C/Users/Mozta/Desktop/portal_xelha/src/inicio/models.py",
+		"/C/Users/Mozta/Desktop/portal_xelha/src/templates/login.html",
 		"/C/Users/Mozta/Desktop/portal_xelha/src/inicio/migrations/0001_initial.py",
+		"/C/Users/Mozta/Desktop/portal_xelha/src/inicio/telegrambot.urls",
 		"/C/Users/Mozta/Documents/GitHub/portalXelha/src/manage.py",
 		"/C/Users/Mozta/Desktop/portal_xelha/portal/manage.py",
 		"/C/Users/Mozta/Desktop/portal_xelha/Scripts/django-admin.py",
@@ -156,6 +186,33 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tamTabla",
+			"tabla",
+			"updateArc",
+			"console",
+			"lenX",
+			"legend",
+			"z0",
+			"table",
+			"console",
+			"sumTotal",
+			"percent",
+			"pieInner",
+			"pieTop",
+			"reacomodaY",
+			"Datos3",
+			"pieTop",
+			"margin",
+			"level",
+			"legend",
+			"aquiGrafica",
+			"aquiGrafica2",
+			"SD",
+			"pop",
+			"zoomIn",
+			"myColor",
+			"1",
+			"myColor",
 			"favicon.jpg",
 			"PlayerPrefs.SetString (\"dis1",
 			"."
@@ -176,227 +233,11 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/inicio/models.py",
-					"settings":
-					{
-						"buffer_size": 405,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								405,
-								405
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/portal/settings.py",
-					"settings":
-					{
-						"buffer_size": 3325,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1646,
-								1646
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 495.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/inicio/admin.py",
-					"settings":
-					{
-						"buffer_size": 288,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								288,
-								288
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/inicio/views.py",
-					"settings":
-					{
-						"buffer_size": 269,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								247,
-								258
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/inicio/urls.py",
-					"settings":
-					{
-						"buffer_size": 156,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								154,
-								154
-							]
-						],
-						"settings":
-						{
-							"auto_name": "urls.py",
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/portal/urls.py",
-					"settings":
-					{
-						"buffer_size": 1088,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1088,
-								1088
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/templates/login.html",
-					"settings":
-					{
-						"buffer_size": 2523,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1698,
-								1698
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/inicio/migrations/0001_initial.py",
-					"settings":
-					{
-						"buffer_size": 885,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								363,
-								461
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
 					"file": "src/templates/manttosPrev.html",
 					"settings":
 					{
@@ -417,7 +258,195 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 345.0,
+						"translation.y": 30.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/inicio/urls.py",
+					"settings":
+					{
+						"buffer_size": 244,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								32,
+								32
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/inicio/views.py",
+					"settings":
+					{
+						"buffer_size": 411,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								333,
+								333
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/templates/pastel4.html",
+					"settings":
+					{
+						"buffer_size": 23415,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18916,
+								18916
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 8337.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/templates/__pastel4.html",
+					"settings":
+					{
+						"buffer_size": 8997,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3608,
+								3608
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1476.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/assets/css/style_inicio.css",
+					"settings":
+					{
+						"buffer_size": 2868,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1124,
+								1124
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 405.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/templates/pastel3.html",
+					"settings":
+					{
+						"buffer_size": 18891,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12859,
+								12879
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7740.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/assets/js/Donut3D.js",
+					"settings":
+					{
+						"buffer_size": 6334,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1688,
+								1696
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 978.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

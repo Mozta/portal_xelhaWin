@@ -260,11 +260,9 @@ function f() {
 	//Una vez creada la tabla se le agrega un body de tabla
 	var tbody = legend.append("tbody");
 	//Despues a ese tbody se le añade la primer fila
-	var tr = tbody.selectAll("tr")
-		.data("1")
-		.enter().append("tr");
+	var tr = tbody.selectAll("tr");
 
-	var tamTabla =[1];	//Variable de apoyo para conocer cuantas rebanadas son en el nivel y asi poder agregar su correspondiente cantidad de filas
+	var tamTabla =[];	//Variable de apoyo para conocer cuantas rebanadas son en el nivel y asi poder agregar su correspondiente cantidad de filas
 
 	//var tr = legend.append("tbody");	          	
 	//var legend = d3.select(".aquiGrafica3").append("table").attr('class','legend');
@@ -349,19 +347,26 @@ function f() {
 	function computeTextRotation(d) {
   		return ((d.x + d.dx / 2) - Math.PI / 2) / Math.PI * 180;
 	}
+
+	function clearTable(){
+		tbody.selectAll("tr").remove();
+  		tamTabla=[];
+	}
 	  
  	function zoomIn(p) {g.attr("opacity", 0);
  		var res = p.key.split(".");
   		//alert("Entre a la funcion: "+res.length + "de: " + res[res.length-1]);
   		//console.log(res[res.length-1] + " - " + p.sign);
   		//leg.update(nD);
+  		clearTable();
 
     	if (p.depth > 1) p = p.parent;
     	zoom(p, p);
   	}
   	function zoomOut(p) {g.attr("opacity", 0); 
   		var res = p.key.split(".");
-  		alert("Salgo de la funcion: "+res.length + "de: " + res.pop());
+  		//alert("Salgo de la funcion: "+res.length + "de: " + res.pop());
+  		clearTable();
   		if (!p.parent) return; 
     	zoom(p.parent, p);
   	}
@@ -388,6 +393,10 @@ function f() {
 
     	tamTabla.push("voy");
 
+    	tr = tbody.selectAll("tr")
+						.data(tamTabla)
+						.enter().append("tr");
+
 		          	tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
 	            		.attr("width", '16').attr("height", '16')
 						.attr("fill",col);
@@ -395,9 +404,7 @@ function f() {
 				    tr.append("td").text(d.name);
 				    tr.append("td").text(d.value);
 
-				    tr = tbody.selectAll("tr")
-						.data(tamTabla)
-						.enter().append("tr");
+				    
 
 				    //alert("aguanta");
 
@@ -456,14 +463,24 @@ function f() {
 			          	}
 			        if (res.length == 3){		//Cuando es profundidad 2 (equipos) se pinta con la propia iteración del llamado de la funcion con z2
 			        	//console.log(res+" - "+z2);
-			        	z2++;			        
-			        	legend.innerHTML = "";
+			        	z2++;
+			        	//alert("aquinooo");
+			        	
+			        	//tamTabla=[];
+			        	//tr = tbody.selectAll("tr")
+						//	.data("1")
+						//	.enter().append("tr");
+			        	//tamTabla =[1,2,3,4,5];	//AQUI ME QUEDE POrque no se como borrar la tabla
+			        	//alert("booro");
+
 			        	tabla(d,paleta[z2-1]);
 			          	return paleta[z2-1];
 			          }
 			        if (res.length == 4){		//Cuando es profundidad 3 (tipos) se pinta con la propia iteración del llamado de la funcion con z2
 			        	//console.log(res+" - "+z2);
 			        	z2++;
+			        	//tbody.select("tr").remove();
+			        	//tamTabla = [1];
 			        	tabla(d,paleta[z2-1]);
 			          	return paleta[z2-1];
 			          }
