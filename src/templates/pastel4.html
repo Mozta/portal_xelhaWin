@@ -295,6 +295,30 @@ function f() {
   	center.append("title")	//Texto mostrado al situar el puntero
       	.text("zoom out");
 
+function tabla(d,col){
+    	var voy = 0;
+
+    	tamTabla.push("voy");
+
+    	tr = tbody.selectAll("tr")
+						.data(tamTabla)
+						.enter().append("tr");
+
+		          	tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
+	            		.attr("width", '16').attr("height", '16')
+						.attr("fill",col);
+
+				    tr.append("td").text(d.name);
+				    tr.append("td").text(d.value);
+
+				    
+
+				    //alert("aguanta");
+
+		          	voy++;
+		          	//alert(tamTabla.length);
+    }
+
 	var path = svg.selectAll("g")	//Dibujado de las primeras rebanadas (intro)
       	.data(partition.nodes(root).slice(1))
     	.enter().append("path")
@@ -303,6 +327,7 @@ function f() {
       		z0++;
       		console.log("AQUI");
 			    console.log(d);
+			    tabla(d,paleta[z0-1]);
 			    //var tr = legend.append("tbody").selectAll("tr").data(d).enter().append("tr");
 			    //tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
 	            //.attr("width", '16').attr("height", '16')
@@ -388,29 +413,7 @@ function f() {
     	return {depth: d.depth + 1, x: outsideAngle(d.x), dx: outsideAngle(d.x + d.dx) - outsideAngle(d.x)};
     }
 
-    function tabla(d,col){
-    	var voy = 0;
-
-    	tamTabla.push("voy");
-
-    	tr = tbody.selectAll("tr")
-						.data(tamTabla)
-						.enter().append("tr");
-
-		          	tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
-	            		.attr("width", '16').attr("height", '16')
-						.attr("fill",col);
-
-				    tr.append("td").text(d.name);
-				    tr.append("td").text(d.value);
-
-				    
-
-				    //alert("aguanta");
-
-		          	voy++;
-		          	//alert(tamTabla.length);
-    }
+    
     center.datum(root);
    
     // Al hacer zoom los arcos entran desde el exterior y la salida desde el interior
