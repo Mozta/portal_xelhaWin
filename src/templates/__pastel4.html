@@ -1,0 +1,267 @@
+{% load staticfiles %}
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Portal1</title>
+		<link rel='stylesheet' href='{% static "css/main.css" %}'/>
+
+		<link rel="stylesheet" href='{% static "css/style_inicio.css" %}'/>
+		<script src='{% static "d3/d3.js" %}'></script>
+		<script src='{% static "js/Donut3D.js" %}'></script>
+		<script src='{% static "js/jquery.js" %}'></script>
+		<!-- <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script> -->
+		<!-- <script src='{% static "js/app_inicio.js" %}'></script> -->
+		<!-- <script src='{% static "codebase/dhtmlxgantt.js" %}'></script>  
+		<link rel="stylesheet" href='{% static "codebase/dhtmlxgantt.css" %}'/> -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1><a href="index.html">Experiencias Xcaret</a></h1>
+					<nav id="nav">
+						<ul>
+							<li>
+								<div class="navMenu">
+									<input name="query" id="query" value="" placeholder="Busqueda global..." />
+								</div>
+							</li>
+							<li>
+								<div class="navMenu">
+									<h6>xhfoto</h6>
+								</div>
+							</li>
+                            <!-- <li><a href="perfil.html">Rafael Pérez Aguirre</a></li> -->
+                            <li><a href="index.html" class="icon fa-sign-out"><span class="label">Salir</span></a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<section id="main" class="container">
+					<header>
+                        <h2>Grafica de Abastecimientos</h2>
+                    </header>
+						<div class="12u">
+							<!-- Form -->
+								<section class="box">
+									<!-- <form method="post" action="#">
+										<div class="row uniform 50%">
+											<div class="9u 12u(mobilep)">
+												<div class="select-wrapper">
+												<select name="departamento" required="true" autofocus="Foto">
+													<option disabled="" selected="selected" style="display: none;" value="">Selecciona una opcion...</option>
+													
+													<option value="19">Abastecimineto</option>						
+													<option value="5">Actividades Recreativas</option>				
+													<option value="18">Alimentos y Bebidas</option>					
+													<option value="8">Atencion al Visitante</option>				
+													<option value="49">Bajas</option>								
+													<option value="7">Capital Humano</option>						
+													<option value="16">Direccion Ejecutiva</option>				
+													<option value="15">Fauna</option>								
+													<option value="4">Finanzas y Control</option>					
+													<option value="1" selected="true">Foto</option>				
+													<option value="17">Investigación de Mercado</option>			
+													<option value="9">Masajes</option>							
+													<option value="6">Operacion Parque</option>	
+													<option value="13">Proyectos</option>
+													<option value="12">Relaciones Publicas</option>	
+													<option value="3">Servicios Generales</option>	
+													<option value="11">Sistemas</option>
+													<option value="2">Tiendas</option>		
+													<option value="14">X-Tour</option>						
+												</select>
+												</div>
+											</div>
+											<div class="3u 12u(mobilep)">
+												<input type="submit" value="Search" class="fit" />
+											</div>
+										</div>
+									</form> -->
+									<div class="div1"> 
+										<div class="aquiGrafica">
+										
+										</div>		
+									</div>
+
+									<div class="div1"> 
+										<div class="aquiGrafica2">
+										<div id = "SD"></div>
+										
+										</div>		
+									</div>		
+
+									<div class="div1"> 
+										<div class="aquiGrafica3">
+										
+										</div>		
+									</div>					
+
+								<script>
+									var Datos=[
+										//Solo sustituye el valor de los value por el tag de los resultados
+										{label:"Computadoras", value: 109, color:"#558ED5", posX: 10, posY: 10},
+										{label:"Monitores", value: 64, color:"#FF66CC", posX: 10, posY: 30},
+										{label:"Periféricos", value: 48, color:"#92D050", posX: 10, posY: 50},
+										{label:"Impresoras", value: 31, color:"#FDE146", posX: 10, posY: 70},
+										{label:"Electrónica de red", value: 29, color:"#AD60BE", posX: 10, posY: 90},
+										{label:"Teléfonos", value: 22, color:"#F39409", posX: 10, posY: 110}
+									];
+
+									var Datos2=[];
+
+								
+									
+									verifData();
+									SortData();
+									ajustaY();									
+									
+									//Cambia '.aquiGrafica' por el div donde quieras que aparesca
+									var svg = d3.select('.aquiGrafica').append("svg").attr("width",550).attr("height",300);
+
+									svg.append("g").attr("id","equiposPastel")
+
+									Donut3D.draw("equiposPastel", Datos2, 130, 145, 130, 100, 30, 0);					
+											//X,Y,AngX,AngY,AngZ,Prof,hueco
+									Donut3D.draw2("equiposPastel", Datos2, 380, 70, 130, 100, 30, 0);
+
+									function changeData(){
+										Donut3D.transition("equiposPastel", Datos2, 130, 100, 30, 0);
+									}
+
+									//Verifica si algun conjunto esta vacio y lo elimina
+									//Crea un nuevo array sin los tipos con valor 0
+									function verifData(){
+										i=0;										
+										Datos.forEach(function(d){											
+											if (d.value != 0){
+												Datos2.splice(i,1,Datos[i]);
+											}
+											i++;			
+										});
+									}
+
+									//Ajusta las coordenadas Y para el dibujado de las etiquetas
+									function ajustaY(){
+										i= 10 + ((6-Datos2.length)*20);
+										Datos2.forEach(function(d){
+											d.posY = i;								
+											i+=25;
+										});				
+									}
+
+									//Ordena de mayor a menor
+									function SortData(){
+										Datos2.sort(function (a, b){return (b.value - a.value)});
+									}
+
+
+		
+								</script>
+								</section>
+						</div>
+					
+				</section>
+
+				<div class="row">
+						<div class="12u">
+
+							<!-- Table -->
+								<section class="box">
+
+									<div class="row uniform 50%">
+										<div class="divColorIcon1"><i class="fa fa-laptop fa-3x"></i></div>
+										<div class="3u 12u (mobilep)">
+												<h3>Computadoras</h3>
+										</div>
+										<div class="5u 12u (mobilep"></div>
+										<div class="3u 12u (mobilep)" align="left">
+											<input type="text" name="name" id="name" value="" placeholder="Buscar computadoras" />
+										</div>								
+									</div>
+									<br>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Something</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Nothing</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Something</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Nothing</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Something</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
+
+						</div>
+					</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="http://192.168.40.223/ocsreports/" class="icon fa-cogs"><span class="label">OCS</span></a></li>
+						<li><a href="http://192.168.40.223/glpi/" class="icon fa-rocket"><span class="label">GLPI</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Portal de mantenimientos v0.1 </li><li><a href="http://es.xelha.com/">Xel-Ha</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src='{% static "js/jquery.min.js" %}'></script>
+			<script src='{% static "js/jquery.dropotron.min.js" %}'></script>
+			<script src='{% static "js/jquery.scrollgress.min.js" %}'></script>
+			<script src='{% static "js/skel.min.js" %}'></script>
+			<script src='{% static "js/util.js" %}'></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src='{% static "js/main.js" %}'></script>
+
+			<!--<script src='{% static "js/changePlaceholder.js" %}'></script>
+			<script src='{% static "js/countCheckbox.js" %}'></script>-->
+
+			 
+	</body>
+</html>

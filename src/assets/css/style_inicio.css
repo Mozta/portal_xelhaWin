@@ -56,6 +56,14 @@ svg text.percentEye{
       font-weight:bold;
 }
 
+svg text.TittleEye{
+  fill:black;
+  text-anchor:start;
+  font-size:1.1em;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight:bold;
+}
+
 .div1{
     border: 0px solid #aaa;
     border-radius: 25px 25px 25px 25px;

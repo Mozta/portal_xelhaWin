@@ -97,113 +97,69 @@
 										<div id = "SD"></div>
 										
 										</div>		
-									</div>							
+									</div>		
+
+									<div class="div1"> 
+										<div class="aquiGrafica3">
+										
+										</div>		
+									</div>					
 
 								<script>
-									var Datos=[
-										//Solo sustituye el valor de los value por el tag de los resultados
-										{label:"Computadoras", value: 109, color:"#558ED5", posX: 10, posY: 10},
-										{label:"Monitores", value: 64, color:"#FF66CC", posX: 10, posY: 30},
-										{label:"Periféricos", value: 48, color:"#92D050", posX: 10, posY: 50},
-										{label:"Impresoras", value: 31, color:"#FDE146", posX: 10, posY: 70},
-										{label:"Electrónica de red", value: 29, color:"#AD60BE", posX: 10, posY: 90},
-										{label:"Teléfonos", value: 22, color:"#F39409", posX: 10, posY: 110}
-									];		
-									var Datos2=[];
-
-									var DatosDepto=["Abastecimineto","Actividades Recreativas","Alimentos y Bebidas","Atencion al Visitante","Bajas","Capital Humano","Direccion Ejecutiva","Fauna","Foto"];
-									var DatosCompu=[30,10,50,20,70,30,40,60,47];
-									var DatosMoni=[60,35,48,27,16,34,68,25,64];
-									var DatosPeri=[24,74,36,12,64,40,13,56,109];
-									var DatosImpre=[31, 32, 10, 54, 10, 19, 109, 90, 44];
-									var DatosElec=[30, 84, 81, 35, 68, 36, 81, 79, 13];
-									var DatosTel=[74, 38, 34, 48, 22, 16, 106, 29, 17];
-
-									var Datos3=[];
-
-									for (i in DatosDepto){			
-										Datos3.push({label:DatosDepto[i], value0:DatosCompu[i], value1:DatosMoni[i], value2:DatosPeri[i], value3:DatosImpre[i], value4:DatosElec[i], value5:DatosTel[i], total:DatosCompu[i]+DatosMoni[i]+DatosPeri[i]+DatosImpre[i]+DatosElec[i]+DatosTel[i]});
-									}
-									//console.log(Datos3);
-									
-									verifData();
-									SortData();
-									reacomodaY();									
-									
-									//Cambia '.aquiGrafica' por el div donde quieras que aparesca
-									var svg = d3.select('.aquiGrafica').append("svg").attr("width",550).attr("height",300);
-
-									svg.append("g").attr("id","equiposPastel")
-
-									Donut3D.draw("equiposPastel", Datos2, 130, 145, 130, 100, 30, 0);					
-											//X,Y,AngX,AngY,AngZ,Prof,hueco
-									Donut3D.draw2("equiposPastel", Datos2, 380, 70, 130, 100, 30, 0);
-
-									function changeData(){
-										Donut3D.transition("equiposPastel", Datos2, 130, 100, 30, 0);
-									}
-
-									//Verifica si algun conjunto esta vacio y lo elimina
-									//Crea un nuevo array sin los tipos con valor 0
-									function verifData(){
-										i=0;										
-										Datos.forEach(function(d){											
-											if (d.value != 0){
-												Datos2.splice(i,1,Datos[i]);
-											}
-											i++;			
-										});
-									}
-
-									//Reacomoda las coordenadas Y para el dibujado de las etiquetas
-									function reacomodaY(){
-										i= 10 + ((6-Datos2.length)*20);
-										Datos2.forEach(function(d){
-											d.posY = i;								
-											i+=25;
-										});				
-									}
-
-									//Reacomoda las coordenadas Y para el dibujado de las etiquetas
-									function SortData(){
-										Datos2.sort(function (a, b){return (b.value - a.value)});
-									}
-
-
 
 
 //DATA FOR THE VISUALIZATION
 
 var x=[
-  ["Xcaret", 7000, "SEA",4000, "POD1", 4000],
-  ["Xcaret", 7000, "IN", 3000, "POD2", 3000],
-  ["Xel-Há", 5000, "Abastecimineto", 3000, "Computadoras", 500],
-  ["Xel-Há", 5000, "Abastecimineto", 3000, "Monitores", 500],
-  ["Xel-Há", 5000, "Abastecimineto", 3000, "Periféricos", 400],
-  ["Xel-Há", 5000, "Abastecimineto", 3000, "Impresoras", 600],
-  ["Xel-Há", 5000, "Abastecimineto", 3000, "Electrónica de red", 800],
-  ["Xel-Há", 5000, "Abastecimineto", 3000, "Teléfonos", 200],
-  ["Xel-Há", 5000, "Actividades Recreativas", 1000, "Computadoras", 300],
-  ["Xel-Há", 5000, "Actividades Recreativas", 1000, "Monitores", 200],
-  ["Xel-Há", 5000, "Actividades Recreativas", 1000, "Periféricos", 300],
-  ["Xel-Há", 5000, "Actividades Recreativas", 1000, "Impresoras", 100],
-  ["Xel-Há", 5000, "Actividades Recreativas", 1000, "Electrónica de red", 50],
-  ["Xel-Há", 5000, "Actividades Recreativas", 1000, "Teléfonos", 50],
-  ["Xel-Há", 5000, "Alimentos y Bebidas", 500, "POD3", 500],
-  ["Xel-Há", 5000, "Bajas", 500, "POD4", 500],
-  ["Xplor", 3000, "Xpl", 500, "POD1", 500],
-  ["Xplor", 3000, "Xpl", 2000, "POD2", 2000],
-  ["Xplor", 3000, "Xpl", 500, "POD3", 500],
-  ["Xenotes", 1000, "Xen", 1000, "POD3", 1000],
-  ["Xochimilco", 500, "Xoc", 500, "POD3", 500],
-  ["Xenses", 600, "Xen", 600, "POD3", 600],
+  	["Xcaret", 7000, "SEA",4000, "POD1", 4000, "Escaner", 200],
+  	["Xcaret", 7000, "SEA",4000, "POD1", 4000, "Torreta", 200],
+  	["Xcaret", 7000, "IN", 3000, "POD2", 3000, "Escaner", 200],
+  	["Xcaret", 7000, "IN", 3000, "POD2", 3000, "Torreta", 200],
+  	["Xel-Há", 5000, "Abastecimineto", 3000, "Computadoras", 500, "Escaner", 200],
+  	["Xel-Há", 5000, "Abastecimineto", 3000, "Computadoras", 500, "Torreta", 200],
+  	["Xel-Há", 5000, "Abastecimineto", 3000, "Monitores", 500, "Escaner", 200],
+  	["Xel-Há", 5000, "Abastecimineto", 3000, "Monitores", 500, "Torreta", 200],
+  	["Xel-Há", 5000, "Abastecimineto", 3000, "Periféricos", 400, "Escaner", 200],
+  	["Xel-Há", 5000, "Abastecimineto", 3000, "Periféricos", 400, "Torreta", 200],
+  	["Xel-Há", 5000, "Abastecimineto", 3000, "Impresoras", 600, "Escaner", 200],
+  	["Xel-Há", 5000, "Abastecimineto", 3000, "Impresoras", 600, "Torreta", 200],
+  	["Xel-Há", 5000, "Abastecimineto", 3000, "Electrónica de red", 800, "Escaner", 200],
+  	["Xel-Há", 5000, "Abastecimineto", 3000, "Electrónica de red", 800, "Torreta", 200],
+  	["Xel-Há", 5000, "Abastecimineto", 3000, "Teléfonos", 200, "Escaner", 200],
+  	["Xel-Há", 5000, "Abastecimineto", 3000, "Teléfonos", 200, "Torreta", 200],
+  	["Xel-Há", 5000, "Actividades Recreativas", 1000, "Computadoras", 300, "Escaner", 200],
+  	["Xel-Há", 5000, "Actividades Recreativas", 1000, "Computadoras", 300, "Torreta", 200],
+  	["Xel-Há", 5000, "Actividades Recreativas", 1000, "Monitores", 200, "Escaner", 200],
+  	["Xel-Há", 5000, "Actividades Recreativas", 1000, "Monitores", 200, "Torreta", 200],
+  	["Xel-Há", 5000, "Actividades Recreativas", 1000, "Periféricos", 300, "Escaner", 200],
+  	["Xel-Há", 5000, "Actividades Recreativas", 1000, "Periféricos", 300, "Torreta", 200],
+  	["Xel-Há", 5000, "Actividades Recreativas", 1000, "Impresoras", 100, "Escaner", 200],
+  	["Xel-Há", 5000, "Actividades Recreativas", 1000, "Impresoras", 100, "Torreta", 200],
+	["Xel-Há", 5000, "Actividades Recreativas", 1000, "Electrónica de red", 50, "Escaner", 200],
+	["Xel-Há", 5000, "Actividades Recreativas", 1000, "Electrónica de red", 50, "Torreta", 200],
+  	["Xel-Há", 5000, "Actividades Recreativas", 1000, "Teléfonos", 50, "Escaner", 200],
+  	["Xel-Há", 5000, "Actividades Recreativas", 1000, "Teléfonos", 50, "Torreta", 200],
+  	["Xel-Há", 5000, "Alimentos y Bebidas", 500, "POD3", 500, "Escaner", 200],
+  	["Xel-Há", 5000, "Alimentos y Bebidas", 500, "POD3", 500, "Torreta", 200],
+  	["Xel-Há", 5000, "Bajas", 500, "POD4", 500, "Escaner", 200],
+  	["Xel-Há", 5000, "Bajas", 500, "POD4", 500, "Torreta", 200],
+  	["Xplor", 3000, "Xpl", 500, "POD1", 500, "Escaner", 200],
+  	["Xplor", 3000, "Xpl", 500, "POD1", 500, "Torreta", 200],
+  	["Xplor", 3000, "Xpl", 2000, "POD2", 2000, "Escaner", 200],
+  	["Xplor", 3000, "Xpl", 2000, "POD2", 2000, "Torreta", 200],
+  	["Xplor", 3000, "Xpl", 500, "POD3", 500, "Escaner", 200],
+  	["Xplor", 3000, "Xpl", 500, "POD3", 500, "Torreta", 200],
+  	["Xenotes", 1000, "Xen", 1000, "POD3", 1000, "Escaner", 200],
+  	["Xenotes", 1000, "Xen", 1000, "POD3", 1000, "Torreta", 200],
+  	["Xochimilco", 500, "Xoc", 500, "POD3", 500, "Escaner", 200],
+  	["Xochimilco", 500, "Xoc", 500, "POD3", 500, "Torreta", 200],
+  	["Xenses", 600, "Xen", 600, "POD3", 600, "Escaner", 200],
+  	["Xenses", 600, "Xen", 600, "POD3", 600, "Torreta", 200],
 ];
 
 				// Xcaret Xel-Há Xplor Xenotes Xochimilco Xenses
 var paleta = ["#558ED5", "#FF66CC", "#92D050", "#FDE146", "#AD60BE", "#F39409"];
-
 var arrayColor=[];
-
 var lenX = x.length;
 
 creaArrayColor(x);
@@ -231,7 +187,7 @@ function creaArrayColor(x){
 }
 
 var obj = function(name,x) {
- return {"name":name,"size":Math.abs(x),"sign":x,"children":[]};
+	return {"name":name,"size":Math.abs(x),"sign":x,"children":[]};
 };
 var root = new obj();
 root.name = 'Total';
@@ -240,53 +196,48 @@ var row = x.length;
 var parent = root;
 var temp; var c,r,flag; var temp1,temp2;
 for(c=0;c<column-1;c+=2) {
- temp = new obj();
- temp.name = x[0][c];
- temp.sign = x[0][c+1];
- temp.size = Math.abs(temp.sign);
- parent.children.push(temp);
- parent = parent.children[0];
+	temp = new obj();
+ 	temp.name = x[0][c];
+ 	temp.sign = x[0][c+1];
+ 	temp.size = Math.abs(temp.sign);
+ 	parent.children.push(temp);
+ 	parent = parent.children[0];
 }
 for(r=1;r<row;r++) {
- parent = root;
- for(c=0;c<column-1;c+=2) {
-  flag=0;
-  for(d=0;d<parent.children.length;d++) {
-   if(parent.children[d].name == x[r][c]) {
-    parent = parent.children[d];
-	if(c==column-2) {parent.sign+=x[r][c+1]; parent.size += Math.abs(x[r][c+1]);} //line added 
-	flag=1;
-   }
-  }
-   if(flag==0) {
-   temp = new obj();
-   { temp.name = x[r][c]; temp.sign=x[r][c+1]; temp.size = Math.abs(temp.sign);}
+ 	parent = root;
+ 	for(c=0;c<column-1;c+=2) {
+  		flag=0;
+  		for(d=0;d<parent.children.length;d++) {
+   			if(parent.children[d].name == x[r][c]) {
+    			parent = parent.children[d];
+				if(c==column-2) {parent.sign+=x[r][c+1]; parent.size += Math.abs(x[r][c+1]);} //line added 
+					flag=1;
+   			}
+  		}
+   		if(flag==0) {
+   			temp = new obj();
+   			{ temp.name = x[r][c]; temp.sign=x[r][c+1]; temp.size = Math.abs(temp.sign);}
    
-   parent.children.push(temp);
-   parent=parent.children[parent.children.length-1];
-   }
-   
-  
- }
- 
+   			parent.children.push(temp);
+   			parent=parent.children[parent.children.length-1];
+   		}     
+	}
 }
+
 console.log(root);
 root.size=0;
+
 for(var i=0;i<root.children.length;i++) {
 	root.size+=root.children[i].size;
 }
+
 var currentPos = $("#SD").offset().left;
-
-
-var myColor = d3.scale.linear()
-	.domain([1,2,3,4,5,6])
-	.range(["#009335", "#558ED5", "#FDE146", "#92D050", "#AD60BE", "#F39409"]);
 	
 var margin = {top: 250, right: 800, bottom: 250, left: 250},
     radius = Math.min(margin.top, margin.right, margin.bottom, margin.left) - 10;
 
 var svg = d3.select(".aquiGrafica2").append("svg")	//Aqui se crea el objeto svg y se le asigna en que div se dibujara
-    .attr("width", margin.left + margin.right)
+	.attr("width", margin.left + margin.right)
     .attr("height", margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -298,168 +249,260 @@ var arc = d3.svg.arc()
     .endAngle(function(d) { return d.x + d.dx - .01 / (d.depth + .5); })
     .innerRadius(function(d) { return radius / 4 * d.depth; })
     .outerRadius(function(d) { return radius / 3 * (d.depth + 1) - 1; });
-f();
+
+f();	//Aqui se llama a la funcion
+
 var level=0;
+
 function f() { 
-  // Compute the initial layout on the entire tree to sum sizes.
-  // Also compute the full name and fill color for each node,
-  // and stash the children so they can be restored as we descend.
-  partition
-      .value(function(d) { return d.size; })
-      .nodes(root)
-      .forEach(function(d) {
-        d._children = d.children;
-        d.sum = d.value;
-        d.key = key(d);  
-        //console.log("       "+key(d));
-      });
-  // Now redefine the value function to use the previously-computed sum.
-  partition
-      .children(function(d, depth) { return depth < 1 ? d._children : null; })
-      .value(function(d) { return d.size; });
+	//variables para la creación de la tabla. Se le indica a D3 donde dibujaremos, despues se le añade una tabla con sus respectiva clase
+	var legend = d3.select(".aquiGrafica3").append("table").attr('class','legend');
+	//Una vez creada la tabla se le agrega un body de tabla
+	var tbody = legend.append("tbody");
+	//Despues a ese tbody se le añade la primer fila
+	var tr = tbody.selectAll("tr")
+		.data("1")
+		.enter().append("tr");
 
-  var z0=0;	//Variable que indica la posición del elemento en profundidad 0 (parques) **Intro
+	var tamTabla =[1];	//Variable de apoyo para conocer cuantas rebanadas son en el nivel y asi poder agregar su correspondiente cantidad de filas
 
-  var center = svg.append("circle")
-      .attr("r", radius / 4)
-      .attr("fill","#202020")
-      .on("click", zoomOut);
-  center.append("title")
-      .text("zoom out");
-	  var path = svg.selectAll("g")
-      .data(partition.nodes(root).slice(1))
-    .enter().append("path")
-      .attr("d", arc)
-      .style("fill", function(d) {
-      			z0++;
-          		return paleta[z0-1]; 
-          	})
-	  .each(function(d) { this._current = updateArc(d); })
-      .on("click", zoomIn);
+	//var tr = legend.append("tbody");	          	
+	//var legend = d3.select(".aquiGrafica3").append("table").attr('class','legend');
+	//var tr = legend.append("tbody").selectAll("tr").data(d).enter().append("tr");
+	//Calcula el layout inicial de todo el arbol y la suma de los tamaños
+	//Tambien calcula el nombre completo y color para cada nodo
+	//Y oculta los hijos para que puedan ser restaurados a medida que descendemos en el pastel
+	partition
+    	.value(function(d) { return d.size; })
+      	.nodes(root)
+      	.forEach(function(d) {
+        	d._children = d.children;
+        	d.sum = d.value;
+        	d.key = key(d);  
+        	//console.log("       "+key(d));
+      	});
+
+  //Ahora redefine el valor de la funcion a usar en la suma previamenre calculada
+  	partition
+      	.children(function(d, depth) { return depth < 1 ? d._children : null; })
+      	.value(function(d) { return d.size; });
+
+  	var z0=0;	//Variable que indica la posición del elemento en profundidad 0 (parques) **Intro
+
+  	var center = svg.append("circle")	//Circulo central (boton de regreso)
+      	.attr("r", radius / 4)
+      	.attr("fill","#202020")
+      	.on("click", zoomOut);
+
+  	center.append("title")	//Texto mostrado al situar el puntero
+      	.text("zoom out");
+
+	var path = svg.selectAll("g")	//Dibujado de las primeras rebanadas (intro)
+      	.data(partition.nodes(root).slice(1))
+    	.enter().append("path")
+      	.attr("d", arc)
+      	.style("fill", function(d) {
+      		z0++;
+      		console.log("AQUI");
+			    console.log(d);
+			    //var tr = legend.append("tbody").selectAll("tr").data(d).enter().append("tr");
+			    //tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
+	            //.attr("width", '16').attr("height", '16')
+				//.attr("fill",paleta[z0-1]);
+
+				// create the second column for each segment.
+        		//tr.append("td").text(d.name);
+          	return paleta[z0-1]; 
+        })
+	  	.each(function(d) { this._current = updateArc(d); })
+      	.on("click", zoomIn);
+
 	var g = svg.selectAll("g")
-      .data(partition.nodes(root).slice(1))
-    .enter().append("g");
+      	.data(partition.nodes(root).slice(1))
+    	.enter().append("g");
 
-      var centerText = svg.append("text")
+    var centerText = svg.append("text")	//Texto del circulo regresar
   		.attr("text-anchor","middle")
   		.attr("fill","white")
   		.attr("font-family", "Helvetica Neue, Helvetica, Arial, sans-serif")
   		.text("Regresar");
-	  
-  
-	  
-var text = g.append("text")
-	//.attr("transform", function(d) { return "rotate(" + computeTextRotation(d) + ")"; })
-	.attr("transform", function(d){
-		return "translate("+ arc.centroid(d)+")";
-	})
-	.attr("x", function(d) { return (d.y); })
-    .attr("dx", "-140") // margin
-    .attr("dy", ".35em") // vertical-align
-    .attr("class", "percentEye")
-	.text(function(d) {return d.name; });
 
-function computeTextRotation(d) {
-  return ((d.x + d.dx / 2) - Math.PI / 2) / Math.PI * 180;
-}
+  	var centerTextTittle = svg.append("text")	//Texto del titulo
+	  	.attr("transform", "translate(0,-200)")
+  		.attr("text-anchor","middle")
+  		.attr("fill","black")
+  		.attr("font-family", "Helvetica Neue, Helvetica, Arial, sans-serif")
+  		.text("Parques");
 	  
-  function zoomIn(p) {g.attr("opacity", 0);
-  	
-    if (p.depth > 1) p = p.parent;
-    zoom(p, p);
-  }
-  function zoomOut(p) {g.attr("opacity", 0); 
-  	if (!p.parent) return; 
-    zoom(p.parent, p);
-  }
-  // Zoom to the specified new root.
-  function zoom(root, p) {
-    if (document.documentElement.__transition__) return;
-    // Rescale outside angles to match the new layout.
-    var enterArc,
-        exitArc,
-        outsideAngle = d3.scale.linear().domain([0, 2 * Math.PI]);
-    function insideArc(d) {
-      return p.key > d.key
-          ? {depth: d.depth - 1, x: 0, dx: 0} : p.key < d.key
-          ? {depth: d.depth - 1, x: 2 * Math.PI, dx: 0}
-          : {depth: 0, x: 0, dx: 2 * Math.PI};
-    }
-    function outsideArc(d) {
-      return {depth: d.depth + 1, x: outsideAngle(d.x), dx: outsideAngle(d.x + d.dx) - outsideAngle(d.x)};
-    }
-    center.datum(root);
-    // When zooming in, arcs enter from the outside and exit to the inside.
-    // Entering outside arcs start from the old layout.
-    if (root === p) { enterArc = outsideArc, exitArc = insideArc, outsideAngle.range([p.x, p.x + p.dx]); }
-    path = path.data(partition.nodes(root).slice(1), function(d) { return d.key; });
-	g = g.data(partition.nodes(root).slice(1), function(d) { return d.key; });
-    // When zooming out, arcs enter from the inside and exit to the outside.
-    // Exiting outside arcs transition to the new layout.
-    if (root !== p) enterArc = insideArc, exitArc = outsideArc, outsideAngle.range([p.x, p.x + p.dx]);
-    d3.transition().duration(d3.event.altKey ? 7500 : 750).each(function() {
-      path.exit().transition()
-          .style("fill-opacity", function(d) { return d.depth === 1 + (root === p) ? 1 : 0; })
-          .attrTween("d", function(d) { return arcTween.call(this, exitArc(d)); })
-          .remove();
-
-      var z1 = 0;	//Variable que indica la posición del elemento en profundidad 0 (parques) **Zoom
-      var z2 = 0;	//Variable que indica la posición del elemento en profundidad 2 (equipos) **Zoom
-      path.enter().append("path")
-          .style("fill-opacity", function(d) { return d.depth === 2 - (root === p) ? 1 : 0; })
-
-          .style("fill", function(d) {	//Funcion para asignarle el color dependiendo del nivel
-          	//console.log(d);
-          	var res = d.key.split(".");
-          	if (res.length == 1){		//Cuando es profundidad 0 (parques) se pinta la grafica utilizando la escala linear de colores creada con D3
-          		console.log(res+" - "+z1);
-          		z1++;
-          		return paleta[z1-1];
-          	}
-          	if (res.length == 2)		//Cuando es profundidad 1 (departamentos) se pinta con el array de objetos creado a partir del array original
-	          	for (i=0; i<=lenX; i++){
-	          		if(arrayColor[i].depa == d.name) 
-	          			return arrayColor[i].color;
-	          	}
-	        if (res.length == 3)		//Cuando es profundidad 2 (equipos) se pinta con un simple switch pues ya no es necesario crear otra estructura
-	        	console.log(res+" - "+z2);
-	        	z2++;
-	          	return paleta[z2-1];
-      		})
-          .on("click", zoomIn)
-          .each(function(d) { this._current = enterArc(d); });
-	
-	g.enter().append("text")
+  	  
+	var text = g.append("text")	//Texto inicial (intro)
 		//.attr("transform", function(d) { return "rotate(" + computeTextRotation(d) + ")"; })
 		.attr("transform", function(d){
 			return "translate("+ arc.centroid(d)+")";
 		})
 		.attr("x", function(d) { return (d.y); })
-	    .attr("dx", "-140") // margin
-    .attr("dy", ".35em") // vertical-align
-    .attr("class", "percentEye")
-		.text(function(d) { return d.name; });
-	
-      path.transition()
-          .style("fill-opacity", 1)
-          .attrTween("d", function(d) { return arcTween.call(this, updateArc(d)); });
-    });
-  }
+    	.attr("dx", "-140") // margin
+    	.attr("dy", ".35em") // vertical-align
+    	.attr("class", "percentEye")
+		.text(function(d) {return d.name; });
+
+	function computeTextRotation(d) {
+  		return ((d.x + d.dx / 2) - Math.PI / 2) / Math.PI * 180;
+	}
+	  
+ 	function zoomIn(p) {g.attr("opacity", 0);
+ 		var res = p.key.split(".");
+  		//alert("Entre a la funcion: "+res.length + "de: " + res[res.length-1]);
+  		//console.log(res[res.length-1] + " - " + p.sign);
+  		//leg.update(nD);
+
+    	if (p.depth > 1) p = p.parent;
+    	zoom(p, p);
+  	}
+  	function zoomOut(p) {g.attr("opacity", 0); 
+  		var res = p.key.split(".");
+  		alert("Salgo de la funcion: "+res.length + "de: " + res.pop());
+  		if (!p.parent) return; 
+    	zoom(p.parent, p);
+  	}
+  	// Zoom a la nueva raíz especificada
+  	function zoom(root, p) {
+  		
+    	if (document.documentElement.__transition__) return;
+    	// Reescala los angulos exteriores para que coincidan con el nuevo layaot
+    	var enterArc,
+	        exitArc,
+    	    outsideAngle = d3.scale.linear().domain([0, 2 * Math.PI]);
+    	function insideArc(d) {
+      		return p.key > d.key
+        	? {depth: d.depth - 1, x: 0, dx: 0} : p.key < d.key
+        	? {depth: d.depth - 1, x: 2 * Math.PI, dx: 0}
+        	: {depth: 0, x: 0, dx: 2 * Math.PI};
+    	}
+    function outsideArc(d) {
+    	return {depth: d.depth + 1, x: outsideAngle(d.x), dx: outsideAngle(d.x + d.dx) - outsideAngle(d.x)};
+    }
+
+    function tabla(d,col){
+    	var voy = 0;
+
+    	tamTabla.push("voy");
+
+		          	tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
+	            		.attr("width", '16').attr("height", '16')
+						.attr("fill",col);
+
+				    tr.append("td").text(d.name);
+				    tr.append("td").text(d.value);
+
+				    tr = tbody.selectAll("tr")
+						.data(tamTabla)
+						.enter().append("tr");
+
+				    //alert("aguanta");
+
+		          	voy++;
+		          	//alert(tamTabla.length);
+    }
+    center.datum(root);
+   
+    // Al hacer zoom los arcos entran desde el exterior y la salida desde el interior
+    // Cuando entras se hace la transicion a los arcos exteriores estos comienzan desde el angulo trazado
+    if (root === p) { enterArc = outsideArc, exitArc = insideArc, outsideAngle.range([p.x, p.x + p.dx]); }
+    path = path.data(partition.nodes(root).slice(1), function(d) { return d.key; });
+	g = g.data(partition.nodes(root).slice(1), function(d) { return d.key; });
+    //Cuando el zoom se aleja los arcos entran desde el interior y la salida al exterior
+    // Cuando sales se hace la transicion de los arcos exteriores para el nuevo layaout
+    if (root !== p) enterArc = insideArc, exitArc = outsideArc, outsideAngle.range([p.x, p.x + p.dx]);
+    d3.transition().duration(d3.event.altKey ? 7500 : 750).each(function() {
+    	path.exit().transition()
+          .style("fill-opacity", function(d) { return d.depth === 1 + (root === p) ? 1 : 0; })
+          .attrTween("d", function(d) { return arcTween.call(this, exitArc(d)); })
+          .remove();
+
+		    var z1 = 0;	//Variable que indica la posición del elemento en profundidad 0 (parques) **Zoom
+		    var z2 = 0;	//Variable que indica la posición del elemento en profundidad 2 (equipos) **Zoom
+		    
+
+		    path.enter().append("path")
+		        .style("fill-opacity", function(d) { return d.depth === 2 - (root === p) ? 1 : 0; })
+				.style("fill", function(d) {	//Funcion para asignarle el color dependiendo del nivel
+		          	console.log(d.name + " - " + d.size);
+
+		          	
+		          	
+		          	/*tr.selectAll("tr").data("1").enter().append("tr");
+
+		          	tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
+	            	.attr("width", '16').attr("height", '16')
+					.attr("fill",paleta[z0-1]);
+
+		          	tr.append("td").text(d.name);
+		          	tr.append("td").text(d.value);*/
+
+		          	var res = d.key.split(".");
+		          	if (res.length == 1){		//Cuando es profundidad 0 (parques) se pinta la grafica utilizando la propia iteración del llamado de la función con z1
+		          		//console.log(res+" - "+z1);
+		          		z1++;
+		          		tabla(d,paleta[z1-1]);
+		          		return paleta[z1-1];
+		          	}
+		          	if (res.length == 2)		//Cuando es profundidad 1 (departamentos) se pinta con el array de objetos creado a partir del array original
+			          	for (i=0; i<=lenX; i++){
+			          		if(arrayColor[i].depa == d.name){
+			          			tabla(d,arrayColor[i].color);
+			          			return arrayColor[i].color;
+			          		}
+			          	}
+			        if (res.length == 3){		//Cuando es profundidad 2 (equipos) se pinta con la propia iteración del llamado de la funcion con z2
+			        	//console.log(res+" - "+z2);
+			        	z2++;			        
+			        	legend.innerHTML = "";
+			        	tabla(d,paleta[z2-1]);
+			          	return paleta[z2-1];
+			          }
+			        if (res.length == 4){		//Cuando es profundidad 3 (tipos) se pinta con la propia iteración del llamado de la funcion con z2
+			        	//console.log(res+" - "+z2);
+			        	z2++;
+			        	tabla(d,paleta[z2-1]);
+			          	return paleta[z2-1];
+			          }
+		      		})
+		        .on("click", zoomIn)
+		        .each(function(d) { this._current = enterArc(d); });
+			
+			g.enter().append("text")
+				//.attr("transform", function(d) { return "rotate(" + computeTextRotation(d) + ")"; })
+				.attr("transform", function(d){
+					return "translate("+ arc.centroid(d)+")";
+				})
+				.attr("x", function(d) { return (d.y); })
+			    .attr("dx", "-140") // margin
+		    	.attr("dy", ".35em") // vertical-align
+		    	.attr("class", "percentEye")
+				.text(function(d) { return d.name; });
+			
+		      path.transition()
+		          .style("fill-opacity", 1)
+		          .attrTween("d", function(d) { return arcTween.call(this, updateArc(d)); });
+    	});
+  	}
 }
+
 function key(d) {
-  var k = [], p = d;
-  while (p.depth) k.push(p.name), p = p.parent;
-  return k.reverse().join(".");
+	var k = [], p = d;
+  	while (p.depth) k.push(p.name), p = p.parent;
+  	return k.reverse().join(".");
 }
 function arcTween(b) {
-  var i = d3.interpolate(this._current, b);
-  this._current = i(0);
-  return function(t) {
-    return arc(i(t));
-  };
+  	var i = d3.interpolate(this._current, b);
+  	this._current = i(0);
+  	return function(t) {
+    	return arc(i(t));
+  	};
 }
 function updateArc(d) {
-  return {depth: d.depth, x: d.x, dx: d.dx};
+ 	return {depth: d.depth, x: d.x, dx: d.dx};
 }
 
 
@@ -467,79 +510,6 @@ function updateArc(d) {
 
 
 
-
-
-// function to handle legend.
-    function legend(lD){
-        var leg = {};
-            
-        // create table for legend.
-        var legend = d3.select(id).append("table").attr('class','legend');
-        
-        // create one row per segment.
-        var tr = legend.append("tbody").selectAll("tr").data(lD).enter().append("tr");
-            
-        // create the first column for each segment.
-        tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
-            .attr("width", '16').attr("height", '16')
-			.style("fill", function(d) {	//Funcion para asignarle el color dependiendo del nivel
-          	var res = d.key.split(".");
-          	if (res.length == 1){		//Cuando es profundidad 0 (parques) se pinta la grafica utilizando la escala linear de colores creada con D3
-          		return myColor(d.sign);
-          	}
-          	if (res.length == 2)		//Cuando es profundidad 1 (departamentos) se pinta con el array de objetos creado a partir del array original
-	          	for (i=0; i<=lenX; i++){
-	          		if(arrayColor[i].depa == d.name) 
-	          			return arrayColor[i].color;
-	          	}
-	        if (res.length == 3)		//Cuando es profundidad 2 (equipos) se pinta con un simple switch pues ya no es necesario crear otra estructura
-	          		switch (d.name) {	//Si mas adelante se crea un nuevo tipo de equipos, basta con agregar otro case
-	          			case "Computadoras":
-	          				return paleta[0];
-	          			case "Monitores":
-	          				return paleta[1];
-	          			case "Periféricos":
-	          				return paleta[2];
-	          			case "Impresoras":
-	          				return paleta[3];
-	          			case "Electrónica de red":
-	          				return paleta[4];
-	          			case "Teléfonos":
-	          				return paleta[5];
-	          			default:
-	          				return " tomato";
-	          		}
-      		})
-            
-        // create the second column for each segment.
-        tr.append("td").text(function(d) { return d.name; });
-
-        // create the third column for each segment.
-        tr.append("td").attr("class",'legendFreq')
-            .text(function(d){ return d3.format(",")(d.freq);});
-
-        // create the fourth column for each segment.
-        tr.append("td").attr("class",'legendPerc')
-            .text(function(d){ return getLegend(d,lD);});
-
-        // Utility function to be used to update the legend.
-        leg.update = function(nD){
-            // update the data attached to the row elements.
-            var l = legend.select("tbody").selectAll("tr").data(nD);
-
-            // update the frequencies.
-            l.select(".legendFreq").text(function(d){ return d3.format(",")(d.freq);});
-
-            // update the percentage column.
-            l.select(".legendPerc").text(function(d){ return getLegend(d,nD);});        
-        }
-        
-        function getLegend(d,aD){ // Utility function to compute percentage.
-            return d3.format("%")(d.freq/d3.sum(aD.map(function(v){ return v.freq; })));
-        }
-
-        return leg;
-    }
 
 
 

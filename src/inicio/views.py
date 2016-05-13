@@ -10,5 +10,8 @@ def inicio(request):
 def manttos_prev(request):
 	return render(request, "manttosPrev.html", {})
 
+def muestra_pastel3(request):
+	return render(request, "pastel3.html")
+
 def muestra_pastel4(request):
 	return render(request, "pastel4.html")
