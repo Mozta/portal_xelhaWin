@@ -52,14 +52,6 @@
 	"buffers":
 	[
 		{
-			"file": "src/templates/manttosPrev.html",
-			"settings":
-			{
-				"buffer_size": 3336,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "src/inicio/urls.py",
 			"settings":
 			{
@@ -79,7 +71,7 @@
 			"file": "src/templates/pastel4.html",
 			"settings":
 			{
-				"buffer_size": 23415,
+				"buffer_size": 23403,
 				"line_ending": "Windows"
 			}
 		},
@@ -95,7 +87,7 @@
 			"file": "src/assets/css/style_inicio.css",
 			"settings":
 			{
-				"buffer_size": 2868,
+				"buffer_size": 2611,
 				"line_ending": "Windows"
 			}
 		},
@@ -140,6 +132,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Mozta/Desktop/portal_xelha/src/templates/manttosPrev.html",
 		"/C/Users/Mozta/Desktop/portal_xelha/src/portal/urls.py",
 		"/C/Users/Mozta/Desktop/portal_xelha/src/inicio/urls.py",
 		"/C/Users/Mozta/Desktop/portal_xelha/src/inicio/views.py",
@@ -186,6 +179,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"aquigra",
+			"1050",
+			"aquiGrafica3",
+			"SD",
+			"tabla",
 			"tamTabla",
 			"tabla",
 			"updateArc",
@@ -233,38 +231,11 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/templates/manttosPrev.html",
-					"settings":
-					{
-						"buffer_size": 3336,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								916,
-								916
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 30.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "src/inicio/urls.py",
 					"settings":
 					{
@@ -290,7 +261,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "src/inicio/views.py",
 					"settings":
 					{
@@ -316,19 +287,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "src/templates/pastel4.html",
 					"settings":
 					{
-						"buffer_size": 23415,
+						"buffer_size": 23403,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								18916,
-								18916
+								9684,
+								9684
 							]
 						],
 						"settings":
@@ -336,13 +307,13 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 8337.0,
+						"translation.y": 3783.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "src/templates/__pastel4.html",
 					"settings":
 					{
@@ -363,25 +334,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1476.0,
+						"translation.y": 3150.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "src/assets/css/style_inicio.css",
 					"settings":
 					{
-						"buffer_size": 2868,
+						"buffer_size": 2611,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1124,
-								1124
+								33,
+								33
 							]
 						],
 						"settings":
@@ -391,13 +362,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 405.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "src/templates/pastel3.html",
 					"settings":
 					{
@@ -419,13 +390,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 7740.0,
+						"translation.y": 2106.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "src/assets/js/Donut3D.js",
 					"settings":
 					{

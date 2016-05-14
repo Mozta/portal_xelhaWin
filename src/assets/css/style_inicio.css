@@ -1,6 +1,5 @@
  svg{
  	border: 0px solid #aaa;
- 	position: relative;
  }
 
 path.slice{
@@ -63,15 +62,6 @@ svg text.TittleEye{
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight:bold;
 }
-
-.div1{
-    border: 0px solid #aaa;
-    border-radius: 25px 25px 25px 25px;
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
-}
-
 
 
 .axis path,
@@ -136,12 +126,14 @@ svg text.TittleEye{
 }*/
 /*==================================================*/
 
-#SD {
-    color: white;
-    font-family: sans-serif;
-    z-index:100;
-    position:absolute;
-    top:350px;
-    left:480px;
-    
-  }
+
+.div1{    
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;    
+    width: 100%;
+}
+
+.aquiGrafica2, .aquiGrafica3{  /*hijos*/
+  display: inline-block;
+}
