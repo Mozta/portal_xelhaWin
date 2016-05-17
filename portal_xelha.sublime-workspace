@@ -4,8 +4,24 @@
 		"selected_items":
 		[
 			[
+				"tabl",
+				"tablaFinal"
+			],
+			[
+				"arr",
+				"arrayColor"
+			],
+			[
 				"le",
-				"legend"
+				"length"
+			],
+			[
+				"to",
+				"totalEquipos"
+			],
+			[
+				"Depa",
+				"departamentos"
 			],
 			[
 				"tam",
@@ -71,7 +87,7 @@
 			"file": "src/templates/pastel4.html",
 			"settings":
 			{
-				"buffer_size": 23403,
+				"buffer_size": 22441,
 				"line_ending": "Windows"
 			}
 		},
@@ -87,7 +103,7 @@
 			"file": "src/assets/css/style_inicio.css",
 			"settings":
 			{
-				"buffer_size": 2611,
+				"buffer_size": 2698,
 				"line_ending": "Windows"
 			}
 		},
@@ -179,6 +195,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"console",
+			"tablaFinal",
+			"path",
+			"total",
+			"d.freq",
+			"percent",
+			"h2",
+			"centerTextTittle",
+			"parques",
 			"aquigra",
 			"1050",
 			"aquiGrafica3",
@@ -291,15 +316,15 @@
 					"file": "src/templates/pastel4.html",
 					"settings":
 					{
-						"buffer_size": 23403,
+						"buffer_size": 22441,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9684,
-								9684
+								12378,
+								12378
 							]
 						],
 						"settings":
@@ -307,7 +332,7 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 3783.0,
+						"translation.y": 5187.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -344,15 +369,15 @@
 					"file": "src/assets/css/style_inicio.css",
 					"settings":
 					{
-						"buffer_size": 2611,
+						"buffer_size": 2698,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								33,
-								33
+								2402,
+								2402
 							]
 						],
 						"settings":
@@ -362,7 +387,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1782.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -379,8 +404,8 @@
 						"selection":
 						[
 							[
-								12859,
-								12879
+								14341,
+								14341
 							]
 						],
 						"settings":
@@ -390,7 +415,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2106.0,
+						"translation.y": 2829.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

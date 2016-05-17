@@ -47,45 +47,11 @@
 			<!-- Main -->
 				<section id="main" class="container">
 					<header>
-                        <h2>Grafica de Abastecimientos</h2>
+                        <h2>Grafica2 de Prueba</h2>
                     </header>
 						<div class="12u">
 							<!-- Form -->
 								<section class="box">
-									<!-- <form method="post" action="#">
-										<div class="row uniform 50%">
-											<div class="9u 12u(mobilep)">
-												<div class="select-wrapper">
-												<select name="departamento" required="true" autofocus="Foto">
-													<option disabled="" selected="selected" style="display: none;" value="">Selecciona una opcion...</option>
-													
-													<option value="19">Abastecimineto</option>						
-													<option value="5">Actividades Recreativas</option>				
-													<option value="18">Alimentos y Bebidas</option>					
-													<option value="8">Atencion al Visitante</option>				
-													<option value="49">Bajas</option>								
-													<option value="7">Capital Humano</option>						
-													<option value="16">Direccion Ejecutiva</option>				
-													<option value="15">Fauna</option>								
-													<option value="4">Finanzas y Control</option>					
-													<option value="1" selected="true">Foto</option>				
-													<option value="17">Investigación de Mercado</option>			
-													<option value="9">Masajes</option>							
-													<option value="6">Operacion Parque</option>	
-													<option value="13">Proyectos</option>
-													<option value="12">Relaciones Publicas</option>	
-													<option value="3">Servicios Generales</option>	
-													<option value="11">Sistemas</option>
-													<option value="2">Tiendas</option>		
-													<option value="14">X-Tour</option>						
-												</select>
-												</div>
-											</div>
-											<div class="3u 12u(mobilep)">
-												<input type="submit" value="Search" class="fit" />
-											</div>
-										</div>
-									</form> -->
 
 									<div class="div1"> 
 										<div class="aquiGrafica2">										
@@ -98,10 +64,10 @@
 
 											
 
-								<script>
+<script>
 
 
-//DATA FOR THE VISUALIZATION
+//Datos para la visualizacion
 
 var x=[
   	["Xcaret", 7000, "SEA",4000, "POD1", 4000, "Escaner", 200],
@@ -150,8 +116,12 @@ var x=[
   	["Xenses", 600, "Xen", 600, "POD3", 600, "Torreta", 200],
 ];
 
-				// Xcaret Xel-Há Xplor Xenotes Xochimilco Xenses
-var paleta = ["#558ED5", "#FF66CC", "#92D050", "#FDE146", "#AD60BE", "#F39409"];
+//Paleta con soporte de 20 colores
+				// Xcaret Xel-Há Xplor Xenotes Xochimilco Xenses ...
+var paleta = ["#FF66CC", "#558ED5", "#92D050", "#FDE146", "#AD60BE", "#F39409",
+				"#F8555E","#4C6A8D","#0C9DA9","#FBC38D","#F14440","#D8C19F",
+				"#104A57","#91BEAE","#FFCD55","#FA6A31","#424242","#A60039",
+				"#E6344A","#0B5379","#04779B","#F0E7C0","#FBB351","#ABBC85"];
 var arrayColor=[];
 var lenX = x.length;
 
@@ -162,7 +132,7 @@ function creaArrayColor(x){
 	var j = 1;	//indice para parques
 	temp = x[0][2];	//Variable temporal que almacena el departamento
 	temp2 = x[0][0];	//Variable temporal que almacena el parque
-	arrayColor.push({"park":x[0][0] , "depa":x[0][2] , "equipo":x[0][4] ,"color":paleta[0]});
+	arrayColor.push({"park":x[0][0] , "depa":x[0][2] , "equipo":x[0][4] ,"color":paleta[0]});	//Nuevo array con los datos que importan
 	for(i in x){
 		if (temp2 != x[i][0]){			
 			temp2 = x[i][0];
@@ -174,14 +144,13 @@ function creaArrayColor(x){
 			temp = x[i][2];
 			j++;
 		}
-	}
-	//console.log(arrayColor[0].depa + " , " + arrayColor[0].equipo + " , " +arrayColor[0].color);
-	//console.log(arrayColor);
+	}	
 }
 
 var obj = function(name,x) {
 	return {"name":name,"size":Math.abs(x),"sign":x,"children":[]};
 };
+
 var root = new obj();
 root.name = 'Total';
 var column = x[0].length;
@@ -224,8 +193,7 @@ for(var i=0;i<root.children.length;i++) {
 	root.size+=root.children[i].size;
 }
 
-//var currentPos = $("#SD").offset().left;
-	
+//Comienza la creación del objeto svg (grafica)	
 var margin = {top: 250, right: 250, bottom: 250, left: 250},
     radius = Math.min(margin.top, margin.right, margin.bottom, margin.left) - 10;
 
@@ -250,7 +218,8 @@ var level=0;
 function f() { 
 	//variables para la creación de la tabla. Se le indica a D3 donde dibujaremos, despues se le añade una tabla con sus respectiva clase
 	var legend = d3.select(".aquiGrafica3").append("table").attr('class','legend')
-
+		.attr("width", 400)
+    .attr("height", 400);
 	//Una vez creada la tabla se le agrega un body de tabla
 	var tbody = legend.append("tbody");
 	//Despues a ese tbody se le añade la primer fila
@@ -258,9 +227,6 @@ function f() {
 
 	var tamTabla =[];	//Variable de apoyo para conocer cuantas rebanadas son en el nivel y asi poder agregar su correspondiente cantidad de filas
 
-	//var tr = legend.append("tbody");	          	
-	//var legend = d3.select(".aquiGrafica3").append("table").attr('class','legend');
-	//var tr = legend.append("tbody").selectAll("tr").data(d).enter().append("tr");
 	//Calcula el layout inicial de todo el arbol y la suma de los tamaños
 	//Tambien calcula el nombre completo y color para cada nodo
 	//Y oculta los hijos para que puedan ser restaurados a medida que descendemos en el pastel
@@ -280,6 +246,7 @@ function f() {
       	.value(function(d) { return d.size; });
 
   	var z0=0;	//Variable que indica la posición del elemento en profundidad 0 (parques) **Intro
+  	var totalEquipos = 0;
 
   	var center = svg.append("circle")	//Circulo central (boton de regreso)
       	.attr("r", radius / 4)
@@ -301,17 +268,45 @@ function tabla(d,col){
 		tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
 			.attr("width", '16').attr("height", '16')
 			.attr("fill",col);
-		tr.append("td").text(d.name).attr('class','legendName');
+		tr.append("td").text(d.name).attr('class','legendName').attr("width", '240');
 		tr.append("td").text(d.value).attr('class','legendValue');
+		//alert(tamTabla.length + " -- " + arrayColor.length);
 }
 
+function tablaFinal(){    	
+    	tamTabla.push(d.name);	//array que nos sirve de apoyo para añadir más filas a la tabla (su valor no es relevante, sus posiciones si)  	
+    	tr = tbody.selectAll("tr")	//aqui creamos las filas que llevara el tbody
+			.data(tamTabla)
+			.enter().append("tr");
+		//Las siguientes lineas añaden las columnas (td) a cada fila (tr)
+		tr.append("td").text("");
+		tr.append("td").text("TOTAL").attr('class','legendTotal').attr("width", '240');
+		tr.append("td").text(totalEquipos).attr('class','legendTotal');		
+}
+
+//Funcion que cambia el titulo de la grafica para indicar en que nivel se encuentra el usuario
+function cambiaTitulo(name){
+	centerTextTittle.text(name);
+}
+
+//Funcion que suma el total de equipos por nivel
+function sumEquipos(d){
+	totalEquipos += d.value;	
+}
+
+//Funcion que calcula el porcentaje de la rebanada especificada
+function porcentaje(x){	
+	return Math.round(((x / totalEquipos) * 100) * 100) / 100;
+}
+
+//=======Continuamos con el dibujado========
 	var path = svg.selectAll("g")	//Dibujado de las primeras rebanadas (intro)
       	.data(partition.nodes(root).slice(1))
     	.enter().append("path")
       	.attr("d", arc)
       	.style("fill", function(d) {
       		z0++;      		
-		    console.log(d);
+		    //console.log(d);
 		    tabla(d,paleta[z0-1]);	//Aqui se llama a la función tabla por primera vez para que la dibuje
           	return paleta[z0-1]; 
         })
@@ -329,23 +324,26 @@ function tabla(d,col){
   		.text("Regresar");
 
   	var centerTextTittle = svg.append("text")	//Texto del titulo
-	  	.attr("transform", "translate(0,-200)")
+	  	.attr("transform", "translate(0,-210)")
   		.attr("text-anchor","middle")
   		.attr("fill","black")
   		.attr("font-family", "Helvetica Neue, Helvetica, Arial, sans-serif")
   		.text("Parques");
-	  
-  	  
+	    	  
 	var text = g.append("text")	//Texto inicial (intro)
 		//.attr("transform", function(d) { return "rotate(" + computeTextRotation(d) + ")"; })
 		.attr("transform", function(d){
+			sumEquipos(d);	//Aqui sumamos el total de equipos por nivel para más abajo mostrar el porcentaje de cada rebanada
 			return "translate("+ arc.centroid(d)+")";
 		})
 		.attr("x", function(d) { return (d.y); })
     	.attr("dx", "-140") // margin
     	.attr("dy", ".35em") // vertical-align
     	.attr("class", "percentEye")
-		.text(function(d) {return d.name; });
+		.text(function(d) {return porcentaje(d.value)+"%"; });
+
+	//Añadimos el total inicial a la tabla
+	tablaFinal();
 
 	function computeTextRotation(d) {
   		return ((d.x + d.dx / 2) - Math.PI / 2) / Math.PI * 180;
@@ -375,7 +373,7 @@ function tabla(d,col){
   	}
   	// Zoom a la nueva raíz especificada
   	function zoom(root, p) {
-  		
+  		totalEquipos = 0;	//Cada que entramos a un nivel reseteamos el total de equipos
     	if (document.documentElement.__transition__) return;
     	// Reescala los angulos exteriores para que coincidan con el nuevo layaot
     	var enterArc,
@@ -409,59 +407,39 @@ function tabla(d,col){
           .remove();
 
 		    var z1 = 0;	//Variable que indica la posición del elemento en profundidad 0 (parques) **Zoom
-		    var z2 = 0;	//Variable que indica la posición del elemento en profundidad 2 (equipos) **Zoom
-		    
+		    var z2 = 0;	//Variable que indica la posición del elemento en profundidad 2 (equipos) **Zoom		   
 
 		    path.enter().append("path")
 		        .style("fill-opacity", function(d) { return d.depth === 2 - (root === p) ? 1 : 0; })
 				.style("fill", function(d) {	//Funcion para asignarle el color dependiendo del nivel
-		          	console.log(d.name + " - " + d.size);
-
-		          	
-		          	
-		          	/*tr.selectAll("tr").data("1").enter().append("tr");
-
-		          	tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
-	            	.attr("width", '16').attr("height", '16')
-					.attr("fill",paleta[z0-1]);
-
-		          	tr.append("td").text(d.name);
-		          	tr.append("td").text(d.value);*/
+		          	//console.log(d.name + " - " + d.size);
 
 		          	var res = d.key.split(".");
 		          	if (res.length == 1){		//Cuando es profundidad 0 (parques) se pinta la grafica utilizando la propia iteración del llamado de la función con z1
 		          		//console.log(res+" - "+z1);
+		          		cambiaTitulo("Parques");
 		          		z1++;
 		          		tabla(d,paleta[z1-1]);
 		          		return paleta[z1-1];
 		          	}
-		          	if (res.length == 2)		//Cuando es profundidad 1 (departamentos) se pinta con el array de objetos creado a partir del array original
+		          	if (res.length == 2){		//Cuando es profundidad 1 (departamentos) se pinta con el array de objetos creado a partir del array original
+		          		cambiaTitulo("Departamentos");
 			          	for (i=0; i<=lenX; i++){
 			          		if(arrayColor[i].depa == d.name){
 			          			tabla(d,arrayColor[i].color);
 			          			return arrayColor[i].color;
 			          		}
 			          	}
-			        if (res.length == 3){		//Cuando es profundidad 2 (equipos) se pinta con la propia iteración del llamado de la funcion con z2
-			        	//console.log(res+" - "+z2);
-			        	z2++;
-			        	//alert("aquinooo");
-			        	
-			        	//tamTabla=[];
-			        	//tr = tbody.selectAll("tr")
-						//	.data("1")
-						//	.enter().append("tr");
-			        	//tamTabla =[1,2,3,4,5];	//AQUI ME QUEDE POrque no se como borrar la tabla
-			        	//alert("booro");
-
+			        }
+			        if (res.length == 3){		//Cuando es profundidad 2 (equipos) se pinta con la propia iteración del llamado de la funcion con z2			        	
+			        	cambiaTitulo("Equipos");
+			        	z2++;			       
 			        	tabla(d,paleta[z2-1]);
 			          	return paleta[z2-1];
-			          }
+			        }
 			        if (res.length == 4){		//Cuando es profundidad 3 (tipos) se pinta con la propia iteración del llamado de la funcion con z2
-			        	//console.log(res+" - "+z2);
-			        	z2++;
-			        	//tbody.select("tr").remove();
-			        	//tamTabla = [1];
+			        	cambiaTitulo("Tipos");
+			        	z2++;			        	
 			        	tabla(d,paleta[z2-1]);
 			          	return paleta[z2-1];
 			          }
@@ -472,14 +450,18 @@ function tabla(d,col){
 			g.enter().append("text")
 				//.attr("transform", function(d) { return "rotate(" + computeTextRotation(d) + ")"; })
 				.attr("transform", function(d){
+					sumEquipos(d);	//Aqui sumamos el total de equipos por nivel para más abajo mostrar el porcentaje de cada rebanada
 					return "translate("+ arc.centroid(d)+")";
 				})
 				.attr("x", function(d) { return (d.y); })
 			    .attr("dx", "-140") // margin
 		    	.attr("dy", ".35em") // vertical-align
 		    	.attr("class", "percentEye")
-				.text(function(d) { return d.name; });
-			
+				.text(function(d) {return porcentaje(d.value)+"%"; });
+
+			//Agregamos el total al final de la tabla
+			tablaFinal();
+
 		      path.transition()
 		          .style("fill-opacity", 1)
 		          .attrTween("d", function(d) { return arcTween.call(this, updateArc(d)); });
@@ -503,33 +485,7 @@ function updateArc(d) {
  	return {depth: d.depth, x: d.x, dx: d.dx};
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-d3.select(self.frameElement).style("height", margin.top + margin.bottom + "px");
-
-									
-								</script>
+</script>
 								</section>
 						</div>
 					

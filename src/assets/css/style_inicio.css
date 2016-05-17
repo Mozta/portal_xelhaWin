@@ -1,3 +1,6 @@
+ @import url("font-awesome.min.css");
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+
  svg{
  	border: 0px solid #aaa;
  }
@@ -115,11 +118,15 @@ svg text.TittleEye{
     border-spacing: 0px;
 }
 .legend td{
-    padding:6px 20px;
+    padding:6px 10px;
     vertical-align:bottom;
 }
 .legendName, .legendPerc{
     text-align: left;
+}
+.legendTotal{
+  text-align: left;
+    font-weight: bold;
 }
 /*.legendValue{
     text-align: right;
